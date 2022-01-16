@@ -5,6 +5,8 @@
 // @description  Scans through backpack.tf premium search pages with ctrl+leftarrow. The scanning stops when all things, crafable and quality types are exhausted. Ctrl + down arrow to force stop.
 // @author       Joseph Lawson
 // @match        *backpack.tf/premium/search*
+// @downloadURL  https://github.com/joekiller/backpack-spell-cacher/edit/main/Joe's%20Backpack.tf%20Premium%20Single%20Item%20Spell%20Scanner%20Cacher.user.js
+// @updateURL    https://github.com/joekiller/backpack-spell-cacher/edit/main/Joe's%20Backpack.tf%20Premium%20Single%20Item%20Spell%20Scanner%20Cacher.meta.js
 // ==/UserScript==
 // Chrome > Settings > Privacy and Security > Site Settings > Additional Permissions > Automatic downloads > add https://[*.]backpack.tf:443
 // weapons of quality 15 "decorated" need to iterate through all the qualities so skip for now
@@ -30,7 +32,7 @@ const cookieName = `cacheSearchStateSingle${item}`;
 
 let [searchState, searchIndex, currentThing, currentSpell] = getCookie(cookieName);
 
-let raw = true;
+let raw = false;
 
 /*
 searchState=
